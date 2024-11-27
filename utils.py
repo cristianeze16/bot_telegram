@@ -1,6 +1,9 @@
 import asyncio
 from telegram.ext import ApplicationBuilder
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 TELEGRAM_API_KEY = os.environ["TELEGRAM_API_KEY"]
 application = ApplicationBuilder().token(TELEGRAM_API_KEY).build()
